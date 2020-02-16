@@ -49,7 +49,7 @@ namespace AESR_mobileA
 
             recycler = this.FindViewById<RecyclerView>(Resource.Id.picturesRECYCLER);
 
-            position = Intent.GetIntExtra("positionOfCluster", 0);
+            position = Intent.GetIntExtra("positionOfCluster", 0);//This stroke is probably not working???
 
             // Plug in the linear layout manager:
             layoutManager = new LinearLayoutManager(this);
