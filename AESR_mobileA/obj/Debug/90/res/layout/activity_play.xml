@@ -1,2 +1,36 @@
 
-  <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android"><GridLayout android:minWidth="25px" android:minHeight="25px" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/gridLayout1"><Button android:text="BACK" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="left" android:id="@+id/backPlayBUTTON" /></GridLayout><ImageView android:src="@drawable/defpic" android:layout_width="match_parent" android:layout_height="@dimen/abc_action_bar_stacked_tab_max_width" android:id="@+id/playImage" /><TextView android:text="PRESS 'PLAY' TO BEGIN" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/resultPLAY_TEXTVIEW" android:textSize="15dp" android:gravity="center" /><Button android:text="BEGIN" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/nextImgBUTTON" /></LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <GridLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout1" >
+        <Button
+            android:text="BACK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:id="@+id/backPlayBUTTON" />
+    </GridLayout>
+    <ImageView
+        android:src="@drawable/defpic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_stacked_tab_max_width"
+        android:id="@+id/playImage" />
+    <TextView
+        android:text="PRESS 'PLAY' TO BEGIN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultPLAY_TEXTVIEW"
+        android:textSize="15dp"
+        android:gravity="center"/>
+    <Button
+        android:text="BEGIN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextImgBUTTON" />
+</LinearLayout>

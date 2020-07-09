@@ -25,11 +25,11 @@ public class PictureViewAdapter
 			mono.android.TypeManager.Activate ("AESR_mobileA.PictureViewAdapter, AESR_mobileA", "", this, new java.lang.Object[] {  });
 	}
 
-	public PictureViewAdapter (android.content.Context p0, int p1)
+	public PictureViewAdapter (crc64166b4de75ce3f61a.EditClusterActivity p0, int p1)
 	{
 		super ();
 		if (getClass () == PictureViewAdapter.class)
-			mono.android.TypeManager.Activate ("AESR_mobileA.PictureViewAdapter, AESR_mobileA", "Android.Content.Context, Mono.Android:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1 });
+			mono.android.TypeManager.Activate ("AESR_mobileA.PictureViewAdapter, AESR_mobileA", "AESR_mobileA.EditClusterActivity, AESR_mobileA:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1 });
 	}
 
 

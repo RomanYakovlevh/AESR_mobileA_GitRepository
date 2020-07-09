@@ -57,6 +57,9 @@
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MagicDataA">
+      <HintPath>D:\Downloads\MagicDataA.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -65,19 +68,19 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cluster.cs" />
-    <Compile Include="ClusterViewAdapter.cs" />
-    <Compile Include="ClusterViewHolder.cs" />
+    <Compile Include="LowStuff\Cluster.cs" />
+    <Compile Include="LowStuff\ClusterViewAdapter.cs" />
+    <Compile Include="LowStuff\ClusterViewHolder.cs" />
     <Compile Include="EditClusterActivity.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="PicAndWord.cs" />
-    <Compile Include="PictureViewAdapter.cs" />
-    <Compile Include="PictureViewHolder.cs" />
+    <Compile Include="LowStuff\PicAndWord.cs" />
+    <Compile Include="LowStuff\PictureViewAdapter.cs" />
+    <Compile Include="LowStuff\PictureViewHolder.cs" />
     <Compile Include="PlayActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectClusterActivity.cs" />
-    <Compile Include="Support.cs" />
+    <Compile Include="LowStuff\Support.cs" />
     <Compile Include="Work.cs" />
   </ItemGroup>
   <ItemGroup>

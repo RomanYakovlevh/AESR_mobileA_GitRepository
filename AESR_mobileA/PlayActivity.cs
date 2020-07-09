@@ -96,7 +96,7 @@ namespace AESR_mobileA
 
             var piclist = db.Table<PicAndWord>().ToList();
 
-            picAndWords = piclist.FindAll(x => x.clusterName == clsname);
+            picAndWords = piclist.FindAll(x => x.clusterUniqID == clsname);
 
             nextImgBUTTON.Click += beginPlayBUTTON_Click;
             backPlayBUTTON.Click += BackPlayBUTTON_Click;

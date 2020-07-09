@@ -1,1 +1,31 @@
-<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:minWidth="25px" android:minHeight="25px" xmlns:android="http://schemas.android.com/apk/res/android"><GridLayout android:minWidth="25px" android:minHeight="25px" android:layout_width="match_parent" android:layout_height="70dp" android:id="@+id/gridLayout1"><Button android:text="+" android:id="@+id/addclusterBUTTON" android:layout_height="match_parent" android:layout_width="wrap_content" android:layout_gravity="right" android:importantForAccessibility="auto" android:textSize="35dp" android:layout_margin="5px" /></GridLayout><android.support.v7.widget.RecyclerView android:minWidth="25px" android:minHeight="25px" android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/clusterRECYCLER" /></LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <GridLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/gridLayout1">
+        <Button
+            android:text="+"
+            android:id="@+id/addclusterBUTTON"
+            android:layout_height = "match_parent"
+            android:layout_width = "wrap_content"
+            android:layout_gravity = "right"
+            android:importantForAccessibility="auto"
+            android:textSize = "35dp"
+            android:layout_margin="5px" />
+    </GridLayout>
+    <android.support.v7.widget.RecyclerView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/clusterRECYCLER" />
+</LinearLayout>

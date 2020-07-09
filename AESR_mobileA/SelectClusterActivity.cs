@@ -16,6 +16,8 @@ using SQLite;
 using Android.Graphics;
 using Android.Media;
 
+using MagicDataA;
+
 namespace AESR_mobileA
 {
     //Do not forgot to incule Support.v7 library for RecycleView ~~already~~
@@ -29,8 +31,8 @@ namespace AESR_mobileA
 
         ClusterViewAdapter adapter;
 
-        List<Cluster> clusters = new List<Cluster>();
-        List<PicAndWord> picAndWords = new List<PicAndWord>();
+        public List<Cluster> clusters = new List<Cluster>();
+        public List<PicAndWord> picAndWords = new List<PicAndWord>();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -53,7 +55,21 @@ namespace AESR_mobileA
 
             string[] find = System.IO.Directory.GetFiles(path.AbsolutePath);
 
-            if (/*find.Length == 0*/true)//How to download image or class to IO memory?
+            bool dbexists = false;
+            try
+            {
+                var any = db.Table<Cluster>().ToList();//I dont sure how it works. maybe it doesnt work
+                if (any.Count > 0)
+                {
+                    dbexists = true;
+                }
+            }
+            catch(Exception)
+            {
+               //throw;
+            }
+
+            if (/*find.Length == 0*/!dbexists)//How to download image or class to IO memory?
             {
                 using (FileStream fs = File.Create(System.IO.Path.Combine(path.AbsolutePath, "defpic.png")))
                 {
@@ -68,14 +84,17 @@ namespace AESR_mobileA
                 db.CreateTable<Cluster>();
                 db.CreateTable<PicAndWord>();
 
+                //MagicDataA.Generate.Name()
+
                 Cluster cluster = new Cluster();
                 cluster.clusterName = "defaultCluster";
                 cluster.picsInCluster = 1;
                 cluster.pathToIcon = System.IO.Path.Combine(path.AbsolutePath, "defpic.png");
+                cluster.uniqID = MagicDataA.Generate.Name("cluster", ".0");
 
                 PicAndWord pic = new PicAndWord();
-                pic.clusterName = "defaultCluster";
-                pic.Id_in_curr_cluster = 1;
+                pic.clusterUniqID = cluster.uniqID;
+                pic.uniqID = MagicDataA.Generate.Name("picture", ".0");
                 pic.pathToPic = System.IO.Path.Combine(path.AbsolutePath, "defpic.png");
                 pic.word = "default";
 
@@ -122,6 +141,7 @@ namespace AESR_mobileA
             newcls.clusterName = "new cluster " + iter;
             newcls.picsInCluster = 0;
             newcls.pathToIcon = System.IO.Path.Combine(GetExternalFilesDir("DirectoryPictures").AbsolutePath, "defpic.png");
+            newcls.uniqID = Generate.Name("cluster", ".0");
 
             var db = new SQLiteConnection(System.IO.Path.Combine(GetExternalFilesDir(null).AbsolutePath, "aesrclusters.db3"));
 
@@ -129,11 +149,13 @@ namespace AESR_mobileA
             db.Insert(newcls);
 
             Intent next = new Intent(this, typeof(EditClusterActivity));
-            next.PutExtra("positionOfCluster", db.Table<Cluster>().ToList().Find(x => x.clusterName == "new cluster " + iter).Id - 1);
+            next.PutExtra("positionOfCluster", /*db.Table<Cluster>().ToList().Find(x => x.clusterName == "new cluster " + iter).Id - 1*/clusters.Count);
 
             db.Close();
 
             StartActivity(next);
+
+            next.Dispose();//It is really need? Maybe, it can broke code
         }
 
         void OnItemClick(object sender, int position)

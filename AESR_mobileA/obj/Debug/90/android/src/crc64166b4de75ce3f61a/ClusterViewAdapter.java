@@ -25,11 +25,11 @@ public class ClusterViewAdapter
 			mono.android.TypeManager.Activate ("AESR_mobileA.ClusterViewAdapter, AESR_mobileA", "", this, new java.lang.Object[] {  });
 	}
 
-	public ClusterViewAdapter (android.content.Context p0)
+	public ClusterViewAdapter (crc64166b4de75ce3f61a.SelectClusterActivity p0)
 	{
 		super ();
 		if (getClass () == ClusterViewAdapter.class)
-			mono.android.TypeManager.Activate ("AESR_mobileA.ClusterViewAdapter, AESR_mobileA", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+			mono.android.TypeManager.Activate ("AESR_mobileA.ClusterViewAdapter, AESR_mobileA", "AESR_mobileA.SelectClusterActivity, AESR_mobileA", this, new java.lang.Object[] { p0 });
 	}
 
 

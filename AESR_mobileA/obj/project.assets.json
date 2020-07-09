@@ -2155,24 +2155,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Roman\\.nuget\\packages\\": {},
+    "C:\\Users\\romya\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Roman\\source\\repos\\AESR_mobileA_GitRepository\\AESR_mobileA\\AESR_mobileA.csproj",
+      "projectUniqueName": "C:\\Users\\romya\\source\\repos\\AESR_mobileA_GitRepository\\AESR_mobileA\\AESR_mobileA.csproj",
       "projectName": "AESR_mobileA",
-      "projectPath": "C:\\Users\\Roman\\source\\repos\\AESR_mobileA_GitRepository\\AESR_mobileA\\AESR_mobileA.csproj",
-      "packagesPath": "C:\\Users\\Roman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Roman\\source\\repos\\AESR_mobileA_GitRepository\\AESR_mobileA\\obj\\",
+      "projectPath": "C:\\Users\\romya\\source\\repos\\AESR_mobileA_GitRepository\\AESR_mobileA\\AESR_mobileA.csproj",
+      "packagesPath": "C:\\Users\\romya\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\romya\\source\\repos\\AESR_mobileA_GitRepository\\AESR_mobileA\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\romya\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

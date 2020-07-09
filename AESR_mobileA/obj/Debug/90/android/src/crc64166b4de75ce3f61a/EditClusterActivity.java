@@ -11,6 +11,7 @@ public class EditClusterActivity
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
+			"n_onStop:()V:GetOnStopHandler\n" +
 			"n_onActivityResult:(IILandroid/content/Intent;)V:GetOnActivityResult_IILandroid_content_Intent_Handler\n" +
 			"";
 		mono.android.Runtime.register ("AESR_mobileA.EditClusterActivity, AESR_mobileA", EditClusterActivity.class, __md_methods);
@@ -31,6 +32,14 @@ public class EditClusterActivity
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
+
+
+	public void onStop ()
+	{
+		n_onStop ();
+	}
+
+	private native void n_onStop ();
 
 
 	public void onActivityResult (int p0, int p1, android.content.Intent p2)
